@@ -1,10 +1,14 @@
 # cljr-app
 
-FIXME: write description
+Sample application to explore more on Clojure programming language.
 
 ## Usage
 
-FIXME: write
+@ Environment Setup
+I am using the ubuntu linux (my fav)
+Clojure, Swank, and Leiningen with Emacs on Linux 
+Refered: http://riddell.us/ClojureSwankLeiningenWithEmacsOnLinux.html
+	
 
 ## License
 
