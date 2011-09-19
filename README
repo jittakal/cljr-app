@@ -7,7 +7,7 @@ Sample application to explore more on Clojure programming language.
 @ Environment Setup
 I am using the ubuntu linux (my fav)
 Clojure, Swank, and Leiningen with Emacs on Linux 
-Refered: http://riddell.us/ClojureSwankLeiningenWithEmacsOnLinux.html
+Refer: http://riddell.us/ClojureSwankLeiningenWithEmacsOnLinux.html
 	
 
 ## License
