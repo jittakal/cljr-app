@@ -12,5 +12,4 @@
   (if (< n 2)
     n
     (+ (fib (- n 1 )) (fib (- n 2)))))
-
-(dotrace [fib] (fib 3))
+;; (dotrace [fib] (fib 3))

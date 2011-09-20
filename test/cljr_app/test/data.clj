@@ -2,5 +2,5 @@
   (:use [cljr-app.data])
   (:use [clojure.test]))
 
-(def test-str-conc
+(deftest test-str-conc
   (is (. "Jitendra Baban Takalkar" String/equals (str-conc "Jitendra" "Baban" "Takalkar"))))
