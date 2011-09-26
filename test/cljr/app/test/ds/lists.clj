@@ -1,5 +1,5 @@
-(ns cljr.app.test.datastructure.lists
-  (:use cljr.app.datastructure.lists)
+(ns cljr.app.test.ds.lists
+  (:use cljr.app.ds.lists)
   (:use [clojure.test]))
 
 (def mylist (list 1 2 3 4 5))

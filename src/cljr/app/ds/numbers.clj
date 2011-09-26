@@ -4,7 +4,7 @@
 ;; b) Ratio (22/7)
 ;; c) Float (operation involve double).
 
-(ns cljr.app.datastructure.numbers)
+(ns cljr.app.ds.numbers)
 
 ;; computation related functions
 ;; + - * / inc dec quot rem min max
