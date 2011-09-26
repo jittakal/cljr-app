@@ -17,7 +17,7 @@
   [list]
   (first list))
 
-(defn get-first-bypeek
+(defn get-first-by-peek
   "More efficient to get first element"
   [list]
   (peek list))
@@ -26,3 +26,8 @@
   "This function will return all elements escape first element"
   [list]
   (rest list))
+
+(defn put-item-front
+  "Use of conj function"
+  [list item]
+  (conj list item))
