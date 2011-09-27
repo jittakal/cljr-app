@@ -1,0 +1,5 @@
+Clojure unique features
+1. Immutability
+2. Higer-order functions
+3. Laziness
+4. Excellent concurrency semantics.
