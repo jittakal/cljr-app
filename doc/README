@@ -1,5 +1,17 @@
-Clojure unique features
-1. Immutability
-2. Higer-order functions
-3. Laziness
-4. Excellent concurrency semantics.
+@Clojure
+ - is a dialect for Lisp, Lisp is a special langauge. 
+ - is homoiconic with almost no syntax.
+ - has a full macrosystem also supports metaprogramming. 
+ - is a functional language with first-class functions.
+ - immutable data structures.
+ - inbuilt concurrency semantics. 
+ - hosted on the extremely mature and performant Java VM and many more in future - seamless interoperability with Java code.
+ - general purpose as well as dynamic programming language.
+ - excellently suited for domain-specific langaue style of programming.
+
+@Clojure unique features
+ 1. Immutability.
+ 2. Higer-order functions.
+ 3. Laziness.
+ 4. Excellent concurrency semantics.
+ 5. Software Transaction Memory.
