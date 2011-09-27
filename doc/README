@@ -1,13 +1,14 @@
 @Clojure
- - is a dialect for Lisp, Lisp is a special langauge. 
- - is homoiconic with almost no syntax.
- - has a full macrosystem also supports metaprogramming. 
- - is a functional language with first-class functions.
- - immutable data structures.
- - inbuilt concurrency semantics. 
- - hosted on the extremely mature and performant Java VM and many more in future - seamless interoperability with Java code.
- - general purpose as well as dynamic programming language.
- - excellently suited for domain-specific langaue style of programming.
+ - Is a dialect for Lisp, Lisp is a special langauge. 
+ - Is homoiconic with almost no syntax.
+ - Has a full macrosystem also supports metaprogramming. 
+ - Is a functional language with first-class functions.
+ - Immutable data structures.
+ - Inbuilt concurrency semantics. 
+ - Hosted on the extremely mature and performant JavaVM.
+ - Seamless interoperability with Java code.
+ - General purpose as well as dynamic programming language.
+ - Excellently suited for domain-specific langaue style of programming.
 
 @Clojure unique features
  1. Immutability.
@@ -15,3 +16,14 @@
  3. Laziness.
  4. Excellent concurrency semantics.
  5. Software Transaction Memory.
+
+@Clojure coding guidelines
+ 1. Start every source file with a namespace declaration using ns.
+ 2. Use :import and :use expression in ns to describe the classes and namespaces it depends on.
+ 3. Always use :only option of :use to make it clear which symbols you need from the other namespace.
+ 4. Reuse good names, add the :refer-clojure expression to ns if needed.
+ 5. Structure your source files to avoid the need for forward declarations. Place "primiti" definations near the top and the "composite" definations that depend on them toward the bottom.
+
+@Reference
+ 1. Practical Clojure by Luke VanderHart and Stuart Sierra
+ 2. Clojure In Action - Amit Rathore
