@@ -10,6 +10,13 @@
  - General purpose as well as dynamic programming language.
  - Excellently suited for domain-specific langaue style of programming.
 
+@Why Clojure?
+ - A Lisp
+ - For functional programming
+ - Symbiotic with an established Platform
+ - Designed for Concurrency
+ - Code as data.
+
 @Clojure unique features
  01. Dynamic Development.
  02. Functional Programming.
@@ -55,6 +62,12 @@
  - Encapsulation => Clojure functions
  - Reusability   => Clojure functions
 	
+@Clojure Functions
+ In Clojure, all functions are first-class objects.
+ - Can be dynamically created at any point during the execution of the program.
+ - Are not intrinsically named, can be bound to symbols.
+ - Can be stored as value in any data structure.
+ - Can be passed to, and returned from, other functions
 
 @Clojure coding guidelines
  1. Start every source file with a namespace declaration using ns.
