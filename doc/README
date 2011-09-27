@@ -11,18 +11,57 @@
  - Excellently suited for domain-specific langaue style of programming.
 
 @Clojure unique features
- 1. Immutability.
- 2. Higer-order functions.
- 3. Laziness.
- 4. Excellent concurrency semantics.
- 5. Software Transaction Memory.
+ 01. Dynamic Development.
+ 02. Functional Programming.
+ 03. Lisp.
+ 04. Runtime Plymorphism.
+ 05. Concurrent Programming.
+ 06. Immutability.
+ 07. Higer-order functions.
+ 08. Laziness.
+ 09. Excellent concurrency semantics.
+ 10. Software Transaction Memory.
+ 11. Hosted on the JVM
+
+@Clojure program structure
+ 1. Literals
+	- Strings
+	- Characters
+	- Numbers
+ 2. Symbols
+ 3. Special Forms
+	- def
+	- if
+	- do
+	- let
+	- quote
+	- var
+	- fn
+	- loop
+	- recure
+	- throw
+	- try
+	- monitor-enter
+	- monitor-exit
+	- other special forms
+		- dot(.)
+		- new
+		- set!
+ 3. Composite Forms
+
+@Clojure and OOP Paradigm
+ - Modularity    => Clojure namespacing mechanism
+ - Polymorphism  => Clojure Multimethods
+ - Encapsulation => Clojure functions
+ - Reusability   => Clojure functions
+	
 
 @Clojure coding guidelines
  1. Start every source file with a namespace declaration using ns.
  2. Use :import and :use expression in ns to describe the classes and namespaces it depends on.
  3. Always use :only option of :use to make it clear which symbols you need from the other namespace.
  4. Reuse good names, add the :refer-clojure expression to ns if needed.
- 5. Structure your source files to avoid the need for forward declarations. Place "primiti" definations near the top and the "composite" definations that depend on them toward the bottom.
+ 5. Structure your source files to avoid the need for forward declarations. Place "primitive" definations near the top and the "composite" definations that depend on them toward the bottom.
 
 @Reference
  1. Practical Clojure by Luke VanderHart and Stuart Sierra
