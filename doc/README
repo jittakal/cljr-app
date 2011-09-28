@@ -31,12 +31,21 @@
  11. Hosted on the JVM
 
 @Clojure program structure
- 1. Literals
+ 01. Literals
 	- Strings
 	- Characters
-	- Numbers
- 2. Symbols
- 3. Special Forms
+	- nil
+	- true
+	- false
+	- integers
+	- floating point numbers
+	- ratios
+ 02. Vectors
+ 03. Lists
+ 04. Maps
+ 05. Sets
+ 06. Symbols
+ 07. Special Forms
 	- def
 	- if
 	- do
@@ -54,13 +63,20 @@
 		- dot(.)
 		- new
 		- set!
- 3. Composite Forms
+ 08. Composite Forms
+ 09. Function Calls
+ 10. Macros
 
 @Clojure and OOP Paradigm
  - Modularity    => Clojure namespacing mechanism
  - Polymorphism  => Clojure Multimethods
  - Encapsulation => Clojure functions
  - Reusability   => Clojure functions
+
+@Function
+ A function, is a mathematical sense, expresses the idea that one quantity
+ (the argument of the function, also known as the input) completely
+ determines another quantity (the value, or the output).
 	
 @Clojure Functions
  In Clojure, all functions are first-class objects.
@@ -68,6 +84,11 @@
  - Are not intrinsically named, can be bound to symbols.
  - Can be stored as value in any data structure.
  - Can be passed to, and returned from, other functions
+
+@Closure Oriented Programming
+ - Functions as parameter
+ - Functions as return value
+ - Composing functions
 
 @Clojure coding guidelines
  1. Start every source file with a namespace declaration using ns.
