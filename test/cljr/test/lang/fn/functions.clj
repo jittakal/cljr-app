@@ -39,6 +39,4 @@
   (is (. "It's hot" String/equals (weather-judge 26)))
   (is (. "It's comfortable" String/equals (weather-judge 23))))
 
-(deftest test-seconds-to-weeks
-  (is (= 1/10080 (seconds-to-weeks-v1 60)))
-  (is (= 1/10080 (seconds-to-weeks-v2 60))))
+
