@@ -19,16 +19,12 @@
   (is (= 25 (* 5 5))))
 
 ;; /
-(deftest test-divd-1
-  (is (= 5 (/ 25 5))))
-
-(deftest test-divd-2
+(deftest test-divd
+  (is (= 5 (/ 25 5)))
   (is (= 29/2 (/ 29 2))))
 
 ;; inc
-(deftest test-inc-1
-  (is (= 10 (inc 9))))
-
-(deftest test-inc-2
+(deftest test-inc
+  (is (= 10 (inc 9)))
   (is (= 0 (inc -1))))
 
