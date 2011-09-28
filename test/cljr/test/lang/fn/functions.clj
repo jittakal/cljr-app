@@ -27,3 +27,14 @@
 (deftest test-multiply
   (is (= 25 (multiply 5 5)))
   (is (= -10 (multiply -5 2))))
+
+(deftest test-find-max
+  (is (= 12 (find-max 10 12))))
+
+(deftest test-find-min
+  (is (= 10 (find-min 10 12))))
+
+(deftest test-weather-judge
+  (is (. "It's cold" String/equals (weather-judge 19)))
+  (is (. "It's hot" String/equals (weather-judge 26)))
+  (is (. "It's comfortable" String/equals (weather-judge 23))))

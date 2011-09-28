@@ -31,3 +31,28 @@
 (def sq #(* % %))
 
 (def multiply #(* %1 %2))
+
+;; if conditional expression
+(defn find-max
+  "return max number from two arguments"
+  [num1 num2]
+  (if (> num1 num2)
+    num1
+    num2))
+
+;; if-not conditonal expression
+(defn find-min
+  "return min mumber from two arguments"
+  [num1 num2]
+  (if-not (> num1 num2)
+    num1
+    num2))
+
+;; cond conditional expression
+(defn weather-judge
+  "Given a temprature in degrees centigrade, comments on the weather."
+  [temp]
+  (cond
+   (< temp 20) "It's cold"
+   (> temp 25) "It's hot"
+   :else "It's comfortable"))
