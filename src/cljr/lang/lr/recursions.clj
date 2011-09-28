@@ -1,4 +1,4 @@
-(ns cljr.lang.recur)
+(ns cljr.lang.lr.recursions)
 
 (defn factorial
   "recursive function used to calculate the factorial of a natural number"
