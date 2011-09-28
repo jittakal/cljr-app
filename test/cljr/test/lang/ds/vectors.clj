@@ -1,4 +1,4 @@
-(ns cljr.lang.test.ds.vectors
+(ns cljr.test.lang.ds.vectors
   (:use cljr.lang.ds.vectors)
   (:use [clojure.test]))
 

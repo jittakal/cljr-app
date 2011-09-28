@@ -1,4 +1,4 @@
-(ns cljr.lang.test.dt.datatypes
+(ns cljr.test.lang.dt.datatypes
   (:use [cljr.lang.dt datatypes protocols])
   (:use [clojure.test])
   (:import (cljr.lang.dt.datatypes Customer)))

@@ -1,4 +1,4 @@
-(ns cljr.lang.test.core
+(ns cljr.test.lang.core
   (:use [cljr.lang.core])
   (:use [clojure.test]))
 

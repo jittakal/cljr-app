@@ -1,6 +1,6 @@
 ;; Test class for numbers datastructure usage
 
-(ns cljr.lang.test.ds.numbers
+(ns cljr.test.lang.ds.numbers
   (:use cljr.lang.ds.numbers)
   (:use [clojure.test]))
 

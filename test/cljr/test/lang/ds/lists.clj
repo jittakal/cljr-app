@@ -1,4 +1,4 @@
-(ns cljr.lang.test.ds.lists
+(ns cljr.test.lang.ds.lists
   (:use cljr.lang.ds.lists)
   (:use [clojure.test]))
 

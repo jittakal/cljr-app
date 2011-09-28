@@ -1,4 +1,4 @@
-(ns cljr.lang.test.multimethod
+(ns cljr.test.lang.multimethod
   (:use [cljr.lang.multimethod])
   (:use [clojure.test]))
 

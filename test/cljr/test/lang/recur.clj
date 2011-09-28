@@ -1,4 +1,4 @@
-(ns cljr.lang.test.recur
+(ns cljr.test.lang.recur
   (:use [cljr.lang.recur])
   (:use [clojure.test]))
 

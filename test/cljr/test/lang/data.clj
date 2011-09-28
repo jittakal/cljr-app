@@ -1,4 +1,4 @@
-(ns cljr.lang.test.data
+(ns cljr.test.lang.data
   (:use [cljr.lang.data])
   (:use [clojure.test]))
 
