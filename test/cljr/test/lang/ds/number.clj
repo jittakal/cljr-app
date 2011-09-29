@@ -1,7 +1,7 @@
 ;; Test class for numbers datastructure usage
 
-(ns cljr.test.lang.ds.numbers
-  (:use cljr.lang.ds.numbers)
+(ns cljr.test.lang.ds.number
+  (:use cljr.lang.ds.number)
   (:use [clojure.test]))
 
 ;; test cases for computation functions

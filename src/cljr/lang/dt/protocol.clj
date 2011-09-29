@@ -1,4 +1,4 @@
-(ns cljr.lang.dt.protocols)
+(ns cljr.lang.dt.protocol)
 
 (defprotocol SampleHttp
   "This is sample HTTP protocol"

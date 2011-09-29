@@ -1,5 +1,5 @@
-(ns cljr.test.lang.ds.vectors
-  (:use cljr.lang.ds.vectors)
+(ns cljr.test.lang.ds.vector
+  (:use cljr.lang.ds.vector)
   (:use [clojure.test]))
 
 ;; create vector

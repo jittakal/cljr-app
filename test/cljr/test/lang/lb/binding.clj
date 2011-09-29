@@ -1,5 +1,5 @@
-(ns cljr.test.lang.lb.bindings
-  (:use [cljr.lang.lb.bindings])
+(ns cljr.test.lang.lb.binding
+  (:use [cljr.lang.lb.binding])
   (:use [clojure.test]))
 
 (deftest test-seconds-to-weeks

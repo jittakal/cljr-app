@@ -1,4 +1,4 @@
-(ns cljr.lang.ds.lists)
+(ns cljr.lang.ds.list)
 
 ;;(def mylist (list 1 2 3 4 5))
 

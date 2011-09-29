@@ -1,5 +1,5 @@
-(ns cljr.test.lang.fn.functions
-  (:use [cljr.lang.fn.functions])
+(ns cljr.test.lang.fn.function
+  (:use [cljr.lang.fn.function])
   (:use [clojure.test]))
 
 (deftest test-my-mult

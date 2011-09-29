@@ -1,7 +1,7 @@
-(ns cljr.test.lang.dt.datatypes
-  (:use [cljr.lang.dt datatypes protocols])
+(ns cljr.test.lang.dt.datatype
+  (:use [cljr.lang.dt datatype protocol])
   (:use [clojure.test])
-  (:import (cljr.lang.dt.datatypes Customer)))
+  (:import (cljr.lang.dt.datatype Customer)))
 
 (def cust (Customer. "Jitendra" "Takalkar"))
 (def creq {:uri "/customer/get/0001"})

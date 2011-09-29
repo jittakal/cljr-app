@@ -1,5 +1,5 @@
-(ns cljr.test.lang.lr.recursions
-  (:use [cljr.lang.lr.recursions])
+(ns cljr.test.lang.lr.recursion
+  (:use [cljr.lang.lr.recursion])
   (:use [clojure.test]))
 
 (deftest test-factorial

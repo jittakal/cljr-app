@@ -1,4 +1,4 @@
-(ns cljr.lang.fn.functions)
+(ns cljr.lang.fn.function)
 
 ;; define functions with fn
 (def my-mult

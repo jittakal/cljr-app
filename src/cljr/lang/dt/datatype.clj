@@ -1,5 +1,5 @@
-(ns cljr.lang.dt.datatypes
-  (:use [cljr.lang.dt.protocols]))
+(ns cljr.lang.dt.datatype
+  (:use [cljr.lang.dt.protocol]))
 
 (defrecord Customer [fname lname]
   SampleHttp

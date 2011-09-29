@@ -1,4 +1,4 @@
-(ns cljr.lang.lb.bindings)
+(ns cljr.lang.lb.binding)
 
 ;; local bindings
 (defn seconds-to-weeks-v1
