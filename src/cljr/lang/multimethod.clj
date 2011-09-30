@@ -55,6 +55,28 @@
 (defmethod talk "other" [creature]
   (str (:name creature) " speaks."))
 
+
+
+(defmulti get-character :rettype)
+
+(defmethod get-character "yorn" [bval]
+  (if (true? (:val bval))
+    \Y
+    \N))
+
+(defmethod get-character "torf" [bval]
+  (if (true? (:val bval))
+    \T
+    \F))
+
+(defmethod get-character "1or0" [bval]
+  (if (true? (:val bval))
+    \1
+    \0))
+
+
+
+
 ;; herarchies -> (derive child parent)
 
 (derive ::manager ::employee)

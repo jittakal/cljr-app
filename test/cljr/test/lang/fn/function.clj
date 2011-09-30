@@ -39,4 +39,9 @@
   (is (. "It's hot" String/equals (weather-judge 26)))
   (is (. "It's comfortable" String/equals (weather-judge 23))))
 
+(deftest test-get-boolean
+  (is (= true (get-boolean \T)))
+  (is (= false (get-boolean \F)))
+  (is (= false (get-boolean \C))))
+
 

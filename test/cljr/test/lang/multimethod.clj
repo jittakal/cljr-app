@@ -26,5 +26,14 @@
   (is (. (talk d) String/equals "Drung grunts."))
   (is (. (talk a) String/equals "Arthur speaks.")))
 
+(def ab {:rettype "yorn" :val true})
+(def ac {:rettype "torf" :val false})
+(def ad {:rettype "1or0" :val true} )
+
+(deftest test-get-character
+  (is (= \Y (get-character ab)))
+  (is (= \F (get-character ac)))
+  (is (= \1 (get-character ad))))
+
 (deftest test-manager-employee-herarchy
   (is (isa? :cljr.lang.multimethod/manager :cljr.lang.multimethod/employee)))

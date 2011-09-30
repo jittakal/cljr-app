@@ -57,3 +57,10 @@
    (> temp 25) "It's hot"
    :else "It's comfortable"))
 
+(defn get-boolean [c]
+  "return true if character is one of the T F t f Y N y n 1 0"
+  (cond
+   (some #(= c %) '(\T \t \Y \y \1)) true
+   (some #(= c %) '(\F \f \N \n \0)) false
+   :else false))
+

@@ -97,7 +97,13 @@
  4. Reuse good names, add the :refer-clojure expression to ns if needed.
  5. Structure your source files to avoid the need for forward declarations.
     Place "primitive" definations near the top and the "composite" definations that depend on them toward the bottom.
- 6. use let to make your code cleaner and to store the results of calculations, so you don't have to perform them multiple times.
+ 6. Use let to make your code cleaner and to store the results of calculations, so you don't have to perform them multiple times.
+ 7. Use refs provide synchronous, coordinated updates, and allow direct access to the STM System
+ 8. Use atoms to manage synchronous, independent state (such as chahed or memorized values) with maximum efficientcy.
+ 9. Use agents to manage asynchronous state as well as introduce concurrency into your program.
+ 10. Use vars to maintain state within a stack discipline to efficiently simulate mutable variables for algorithms that require it.
+ 11. Use validator functions to maintain data integrity.
+ 12. Use watches to trigger events dependent on an identitys values. 
 
 @Reference
  1. Practical Clojure by Luke VanderHart and Stuart Sierra
