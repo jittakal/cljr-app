@@ -6,5 +6,6 @@
   (is (= 1 (count (all)))))
 
 ;;(deftest test-create
-;;(is (. "Home" String/equals (:name (create {:name "Home"})))))
+;;  (is (. "Home" String/equals (:name (create {:name "Home"}))))
+;;  (is (. "Business" String/equals (:name (create {:name "Business"})))))
 
