@@ -3,11 +3,11 @@
   (:require [compojure.route :as route]
             [compojure.handler :as handler]
             [ring.adapter.jetty :as ring]
-            [cljr.app.todo.controllers.todos]
-            [cljr.app.todo.views.layout :as layout]))
+            [cljr.app.todo.controller.todo :as todo-c]
+            [cljr.app.todo.view.layout :as layout]))
 
 (defroutes routes
-  cljr.app.todo.controllers.todos/routes
+  todo-c/routes
   (route/resources "/")
   (route/not-found (layout/four-oh-four)))
 
@@ -17,5 +17,5 @@
   (ring/run-jetty (var application) {:port (or port 8080) :join? false}))
 
 (defn -main []
-  (let [port (Integer/parseInit (System/getenv "PORT"))]
+  (let [port (Integer/parseInt (System/getenv "PORT"))]
     (start port)))

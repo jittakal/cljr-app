@@ -1,6 +1,6 @@
 (ns cljr.app.todo.model.todolist
-  (:use [clojure.java.jdbc :as sql])
-  (:use [cljr.app.todo.model.base]))
+  (:use [cljr.app.todo.model.base :only (db)])
+  (:require [clojure.java.jdbc :as sql]))
 
 (defn all
   []
@@ -10,6 +10,6 @@
       (into [] results))))
 
 (defn create
-  [data]
+  [todolist]
   (sql/with-connection db
-    (sql/insert-record :todolist data)))
+    (sql/insert-record :todolist todolist)))
