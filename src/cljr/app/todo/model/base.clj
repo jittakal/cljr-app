@@ -1,4 +1,4 @@
-(ns cljr.app.todo.db.dbcommon
+(ns cljr.app.todo.model.base
   (:use [clojure.java.jdbc :as sql]))
 
 (def db

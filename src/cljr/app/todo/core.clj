@@ -1,17 +1,21 @@
 (ns cljr.app.todo.core
-  (:use [compojure.core :only (defroutes GET)])
-  (:use [hiccup.page-helpers :only (html5)])
-  (:require [ring.adapter.jetty :as ring]))
-
-(defn index []
-  (html5
-   [:head
-    [:title "ToDo"]]
-   [:body
-    [:div {:id "content"} "Hello World"]]))
+  (:use [compojure.core :only [defroutes]])
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]
+            [ring.adapter.jetty :as ring]
+            [cljr.app.todo.controllers.todos]
+            [cljr.app.todo.views.layout :as layout]))
 
 (defroutes routes
-  (GET "/" [] (index)))
+  cljr.app.todo.controllers.todos/routes
+  (route/resources "/")
+  (route/not-found (layout/four-oh-four)))
 
-(defn start []
-  (ring/run-jetty routes {:port 8080 :join? false}))
+(def application (handler/site routes))
+
+(defn start [port]
+  (ring/run-jetty (var application) {:port (or port 8080) :join? false}))
+
+(defn -main []
+  (let [port (Integer/parseInit (System/getenv "PORT"))]
+    (start port)))

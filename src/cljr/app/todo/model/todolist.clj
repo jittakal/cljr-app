@@ -1,15 +1,15 @@
-(ns cljr.app.todo.db.todolist
+(ns cljr.app.todo.model.todolist
   (:use [clojure.java.jdbc :as sql])
-  (:use [cljr.app.todo.db.dbcommon]))
+  (:use [cljr.app.todo.model.base]))
 
-(defn get-all
+(defn all
   []
   (sql/with-connection db
     (sql/with-query-results results
       ["select * from todolist"]
       (into [] results))))
 
-(defn create-record
-  [data-map]
+(defn create
+  [data]
   (sql/with-connection db
-    (sql/insert-record :todolist data-map)))
+    (sql/insert-record :todolist data)))
