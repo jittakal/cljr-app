@@ -1,5 +1,5 @@
-(ns cljr.test.lang.refs
-  (:use [cljr.lang.refs])
+(ns cljr.test.lang.rt.refs
+  (:use [cljr.lang.rt.refs])
   (:use [clojure.test]))
 
 (def account1 (ref 1000))

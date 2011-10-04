@@ -1,5 +1,5 @@
-(ns cljr.test.lang.multimethod
-  (:use [cljr.lang.multimethod])
+(ns cljr.test.lang.mh.multimethod
+  (:use [cljr.lang.mh.multimethod])
   (:use [clojure.test]))
 
 (def a {:name "Arthur" :species  "human" :strength 8})
@@ -36,4 +36,4 @@
   (is (= \1 (get-character ad))))
 
 (deftest test-manager-employee-herarchy
-  (is (isa? :cljr.lang.multimethod/manager :cljr.lang.multimethod/employee)))
+  (is (isa? :cljr.lang.mh.multimethod/manager :cljr.lang.mh.multimethod/employee)))

@@ -1,4 +1,4 @@
-(ns cljr.lang.refs)
+(ns cljr.lang.rt.refs)
 
 (defn transfer
   "transfer money from one account to another account"

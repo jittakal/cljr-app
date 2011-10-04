@@ -1,4 +1,4 @@
-(ns cljr.lang.core)
+(ns cljr.lang.api.core)
 
 (defn say-hello
   [name]

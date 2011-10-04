@@ -1,4 +1,4 @@
-(ns cljr.lang.multimethod)
+(ns cljr.lang.mh.multimethod)
 
 ;; multimethod with single dispatch value.
 (defmulti move :species)

@@ -1,5 +1,5 @@
-(ns cljr.test.lang.core
-  (:use [cljr.lang.core])
+(ns cljr.test.lang.api.core
+  (:use [cljr.lang.api.core])
   (:use [clojure.test]))
 
 (deftest test-say-hello

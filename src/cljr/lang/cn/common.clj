@@ -1,4 +1,4 @@
-(ns cljr.lang.temp)
+(ns cljr.lang.cn.common)
 
 (defn what-is-count
   "This function returns the count of the list"

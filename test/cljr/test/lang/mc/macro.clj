@@ -1,5 +1,5 @@
-(ns cljr.test.lang.macro
-  (:use [cljr.lang.macro])
+(ns cljr.test.lang.mc.macro
+  (:use [cljr.lang.mc.macro])
   (:use [clojure.test]))
 
 (deftest test-sum

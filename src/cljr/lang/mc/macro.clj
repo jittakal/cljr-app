@@ -1,4 +1,4 @@
-(ns cljr.lang.macro)
+(ns cljr.lang.mc.macro)
 
 (defmacro tripple-do
   "evaluates the expression three times"

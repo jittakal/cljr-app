@@ -1,5 +1,5 @@
-(ns cljr.test.lang.temp
-  (:use [cljr.lang.temp])
+(ns cljr.test.lang.cn.common
+  (:use [cljr.lang.cn.common])
   (:use [clojure.test]))
 
 (deftest test-what-is-count
