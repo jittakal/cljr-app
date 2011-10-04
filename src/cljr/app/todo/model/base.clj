@@ -3,20 +3,14 @@
             [clojure.java.jdbc :as sql])
   (:import (java.net URI)))
 
-;;export DATABASE_URL="//postgres:postgres@localhost:5432/todo"
-
 (def default-db-url "//postgres:postgres@localhost:5432/todo")
+(def default-db-port 5432)
 
 (defn db-spec
   []
-  (let [url (URI. (let [db-url (System/getenv "DATABASE_URL")]
-                    (if (nil? db-url)
-                      default-db-url
-                      db-url)))
+  (let [url (URI. (if-let [db-url (System/getenv "DATABASE_URL")] db-url default-db-url))
         host (.getHost url)
-        port (if (pos? (.getPort url))
-               (.getPort url)
-               5432)
+        port (if (pos? (.getPort url)) (.getPort url) default-db-port)
         path (.getPath url)]
     (merge
      {:subname (str "//" host ":" port path)}
@@ -29,4 +23,3 @@
    {:classname "org.postgres.Driver"
     :subprotocol "postgresql"}
    (db-spec)))
-

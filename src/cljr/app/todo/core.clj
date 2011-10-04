@@ -17,5 +17,6 @@
   (ring/run-jetty (var application) {:port (or port 8080) :join? false}))
 
 (defn -main []
-  (let [port (Integer/parseInt (System/getenv "PORT"))]
+  (let [port (Integer/parseInt
+              (if-let [env-port (System/getenv "PORT")] env-port "8080"))]
     (start port)))
