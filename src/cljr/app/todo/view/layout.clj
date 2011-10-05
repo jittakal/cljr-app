@@ -2,7 +2,7 @@
   (:use [hiccup.core :only [html]]
         [hiccup.page-helpers :only [doctype include-css]]))
 
-(defn comment
+(defn hcomment
   "Wrap the supplied HTML in a comment"
   [html]
   (str "<!--" html "-->"))
@@ -17,20 +17,19 @@
     [:title title]
     [:link {:rel "stylesheet" :href "/css/screen.css" :type "test/css" :media "screen projection"}]
     [:link {:rel "stylesheet" :href "/css/screen.css" :type "test/css" :media "print"}]
-    (comment "[if lt IE 8]><link href=\"/css/ie.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\" /><![endif]")
+    (hcomment "[if lt IE 8]><link href=\"/css/ie.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\" /><![endif]")
     [:link {:rel "stylesheet" :href "/css/plugins/fancy-type/screen.css" :type "test/css" :media "screen, projection"}]
     (include-css "http://fonts.googleapis.com/css?family=Sigmar+One&v1")]
    [:body
     [:div {:class "container"}
      [:div {:id "header" :class "span-24 last"}
       [:h1 {:id "todo"}
-       [:img {:src="images/header.gif" :alt "ToDo" :id "header-image"}]]]
+       [:img {:src "/css/plugins/buttons/icons/tick.png" :alt "ToDo" :id "header-image"}]]]
      [:hr]
      [:div {:id "subheader" :class "span-24 last"}
-      [:h3 {:class "alt"} "Latest Task"]]
+      [:h3 {:class "alt"} "All Tasks"]]
      [:hr]
-     [:h1 {:class "container"} "ToDo"]]
-    [:div {:id "content" :class "container"} body]]))
+     [:div {:id "body" :class "span-24"} body]]]))
 
 (defn four-oh-four
   []

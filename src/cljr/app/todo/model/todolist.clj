@@ -9,6 +9,13 @@
       ["select * from todolist"]
       (into [] results))))
 
+(defn get-name
+  [todolistid]
+  (sql/with-connection db
+    (sql/with-query-results results
+      [(str "select name from todolist where id=" todolistid)]
+      (into [] results))))
+
 (defn create
   [todolist]
   (sql/with-connection db
