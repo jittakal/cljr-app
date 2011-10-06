@@ -14,15 +14,31 @@
   [form]
   (cons (second form) (cons (first form) (nnext form))))
 
-(defn sum
-  "return the sum of zero or more numbers"
-  ([] 0)
-  ([x] x)
-  ([x & more] (+ x (apply sum more))))
-  
-(defn average
-  "calculate average of zero or more numbers"
-  ([] 0)
-  ([x] x)
-  ([x & more] (/ (+ x (apply sum more))
-                 (inc (count more)))))
+
+
+(defmacro unless
+  "sample macro smillar to when-not"
+  [expr form]
+  `(if ~expr nil ~form))
+
+;;(macroexpand '(unless false (println "Hello World")))
+
+(defmacro wrap-in-div
+  "sample macro wrap the content in div element."
+  [id class style & body]
+  `(str "<div id=\"" ~id "\" class=\"" ~class "\" style=\"" ~style "\">" ~@body "</div>"))
+
+;;(macroexpand '(wrap-in-div "header" "span-24" "" "<p>Hello World" "!!!</p>"))
+;;(wrap-in-div "header" "span-24" "" "<p>Hello World" "!!!</p>")
+
+(defmacro when-nt
+  "sample macro simillar to when-not"
+  [expr & body]
+  `(if ~expr nil (do ~@body)))
+
+;;(macroexpand '(when-nt false (println "Hello ") (println "World!!!")))
+;;(when-nt false (println "Hello ") (println "World!!"))
+
+
+
+

@@ -33,4 +33,17 @@
         ret))
     ""))
 
+(defn sum
+  "return the sum of zero or more numbers"
+  ([] 0)
+  ([x] x)
+  ([x & more] (+ x (apply sum more))))
+  
+(defn average
+  "calculate average of zero or more numbers"
+  ([] 0)
+  ([x] x)
+  ([x & more] (/ (+ x (apply sum more))
+                 (inc (count more)))))
+
 
