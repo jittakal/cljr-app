@@ -3,7 +3,7 @@
   (:use [clojure.test]))
 
 (deftest test-all
-  (is (= 2 (count all))))
+  (is (= 2 (count (all)))))
 
 ;;(deftest test-create
 ;;  (is (. "Home" String/equals (:name (create {:name "Home"}))))
