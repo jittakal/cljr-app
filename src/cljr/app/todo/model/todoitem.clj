@@ -1,5 +1,5 @@
 (ns cljr.app.todo.model.todoitem
-  (:use [clojure.java.jdbc :as sql])
+  (:use [clojure.java.jdbc :as sql :only (with-connection with-query-results insert-record)])
   (:use [cljr.app.todo.model.base]))
 
 (defn all

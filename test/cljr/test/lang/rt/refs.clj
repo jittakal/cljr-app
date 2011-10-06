@@ -15,5 +15,5 @@
 
 (deftest test-add-contact
   (add-contact my-contacts {:fname "Jitendra" :lname "Takalkar"})
-  (print-contacts-with-initials my-contacts)
+  ;;(print-contacts-with-initials my-contacts)
   (is (= 1 (count @my-contacts))))

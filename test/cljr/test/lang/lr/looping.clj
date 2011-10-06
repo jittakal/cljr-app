@@ -12,3 +12,6 @@
 (deftest test-countedown
   (is (= 5 (first (countdown [] 5)))))
 
+(deftest test-get-arguments
+  (is (. "p1=v1&p2=v2&" String/equals (get-arguments {"p1" "v1" "p2" "v2"}))))
+

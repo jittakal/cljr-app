@@ -23,4 +23,14 @@
     result
     (recur (conj result x) (dec x))))
 
+(defn get-arguments
+  [map]
+  (if-not (empty? map)
+    (loop [ret "" keys (keys map)]
+      (if keys
+        (let [key (first keys) val (get map key)]
+          (recur (str ret key "=" val "&") (next keys)))
+        ret))
+    ""))
+
 

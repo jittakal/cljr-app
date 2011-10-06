@@ -9,4 +9,4 @@
                  [hiccup "0.3.6"]
                  [clj-http "0.2.1"]]
   :dev-dependencies [[swank-clojure "1.3.2"]]
-  :repositories {"sonatype-oss-public" "https://oss.sonatype.org/content/groups/public/"})
+  :repositories {"sonatype-oss-public" "http://oss.sonatype.org/content/groups/public/"})

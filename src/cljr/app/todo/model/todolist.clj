@@ -1,6 +1,6 @@
 (ns cljr.app.todo.model.todolist
   (:use [cljr.app.todo.model.base :only (db)])
-  (:require [clojure.java.jdbc :as sql]))
+  (:require [clojure.java.jdbc :as sql :only (with-connection with-query-results insert-record)]))
 
 (defn all
   []
