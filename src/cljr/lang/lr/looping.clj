@@ -47,3 +47,10 @@
                  (inc (count more)))))
 
 
+(defn plus-one
+  "this method return the vector of int with plus one"
+  [v]
+  (loop [lv v i 0]
+    (if (= i (count lv))
+      lv
+      (recur (assoc lv i (inc (get lv i))) (inc i)))))

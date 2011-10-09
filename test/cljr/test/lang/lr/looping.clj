@@ -26,3 +26,5 @@
   (is (= 10 (average 10 10 10)))
   (is (= 29/2 (average 14 15))))
 
+(deftest test-plus-one
+  (is (= 2 (get (plus-one [1 2 3]) 0))))
