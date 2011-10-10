@@ -90,6 +90,12 @@
  - Functions as return value
  - Composing functions
 
+@Anonymous Functions
+ Three reasons to create the anonymous functions
+ - The function is so brief and self-explanatory that giving it a name makes the code harder to read, not easier.
+ - The function is beign used only from inside another function and needs a local name, not a top-level binding.
+ - The function is created inside another function for the purpose of closing over some data. 
+
 @Clojure coding guidelines
  1. Start every source file with a namespace declaration using ns.
  2. Use :import and :use expression in ns to describe the classes and namespaces it depends on.
@@ -104,7 +110,11 @@
  10. Use vars to maintain state within a stack discipline to efficiently simulate mutable variables for algorithms that require it.
  11. Use validator functions to maintain data integrity.
  12. Use watches to trigger events dependent on an identitys values. 
+ 13. Use the anonymous function only when you find that they make your code more readable.
+ 14. Use the metadata reader macor to add metadata to vars and parameters.
+ 15. Use with-meta to add metadata to data.
 
 @Reference
  1. Practical Clojure by Luke VanderHart and Stuart Sierra
  2. Clojure In Action - Amit Rathore
+ 3. Programmin Clojure - Stuart Halloway

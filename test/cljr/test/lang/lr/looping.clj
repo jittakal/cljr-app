@@ -28,3 +28,6 @@
 
 (deftest test-plus-one
   (is (= 2 (get (plus-one [1 2 3]) 0))))
+
+(deftest test-reverse-me
+  (is (= 1 (first (reverse-me [1 2 3 4 5])))))

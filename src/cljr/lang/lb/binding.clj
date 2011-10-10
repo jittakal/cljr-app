@@ -14,3 +14,16 @@
         days (/ hours 24)
         weeks (/ days 7)]
     weeks))
+
+(defn skip-start-elements
+  "Binging using let to skip starting elements"
+  []
+  (let [[_ _ z] [1 2 3]] z))
+
+;; Bind both a collection and elements within the collection.
+
+(defn bind-collection
+  []
+  (let [[x y :as coords] [1 2 3 4 5 6]]
+    (str "x: " x " y: " y ", total dimensions " (count coords))))
+

@@ -44,4 +44,8 @@
   (is (= false (get-boolean \F)))
   (is (= false (get-boolean \C))))
 
+(deftest test-greeting
+  (is (= "Hello, World!" (greeting)))
+  (is (= "Hello, Jitendra!" (greeting "Jitendra"))))
+
 

@@ -54,3 +54,11 @@
     (if (= i (count lv))
       lv
       (recur (assoc lv i (inc (get lv i))) (inc i)))))
+
+(defn reverse-me
+  "Return the revers vector"
+  [v]
+  (loop [result [] lv v x (count v)]
+    (if (zero? x)
+      result
+      (recur (conj result (first lv)) (pop lv) (dec x)))))
