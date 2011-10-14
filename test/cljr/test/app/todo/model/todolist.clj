@@ -9,6 +9,7 @@
 ;;  (is (. "Home" String/equals (:name (create {:name "Home"}))))
 ;;  (is (. "Business" String/equals (:name (create {:name "Business"})))))
 
+
 (deftest test-get-name
   (is (. "Home" String/equals (:name (first (get-name 1))))))
 
