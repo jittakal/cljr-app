@@ -1,13 +1,25 @@
 # cljr-app
 
-Sample application to explore more on Clojure programming language.
+Exploring Clojure programming language.
 
 ## Usage
 
 @ Environment Setup
-I am using the ubuntu linux (my fav)
-Clojure, Swank, and Leiningen with Emacs on Linux 
+ubuntu 11.10
+Clojure 1.3.0
+Swank 1.3.3
+Leiningen 1.6.0
+Emacs 23
+ 
 Refer: http://riddell.us/ClojureSwankLeiningenWithEmacsOnLinux.html
+
+@ Important Links
+Clojure: http://clojure.org
+Clojure API: http://clojure.github.com/clojure
+Clojure Contrib API: http://clojure.github.com/clojure-contrib/branch-master/index.html
+Clojure Src: https://github.com/clojure/clojure-contrib
+Sonatype Maven Repo: https://oss.sonatype.org/index.html#welcome
+Artical: http://java.ociweb.com/mark/clojure/article.html
 	
 
 ## License

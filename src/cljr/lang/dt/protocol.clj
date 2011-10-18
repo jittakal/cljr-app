@@ -2,8 +2,8 @@
 
 (defprotocol SampleHttp
   "This is sample HTTP protocol"
-  (do-get [this request response] "GET")
-  (do-post [this request response] "POST"))
+  (do-get [this request] "GET")
+  (do-post [this request] "POST"))
 
 (defprotocol Stack
   "This is sample stack protocol"

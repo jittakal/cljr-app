@@ -3,14 +3,14 @@
 
 (defrecord Customer [fname lname]
   SampleHttp
-  (do-get [this request response]
+  (do-get [this request]
     ;; (println (:uri request))
-    (assoc response :status 200
-           :body (str "GET - Customer : " lname ", " fname)))
-  (do-post [this request response]
-    (assoc response :status 200
-           :body (str "POST - Customer : " lname ", " fname)))
-  Stack
+    {:status 200
+      :body (str "GET - Customer : " lname ", " fname)})
+  (do-post [this request]
+    {:status 200
+      :body (str "POST - Customer : " lname ", " fname)})
+  Stack  
   (push-into [this coll item]
     (cons coll item))
   (pop-off [this coll]

@@ -113,8 +113,17 @@
  13. Use the anonymous function only when you find that they make your code more readable.
  14. Use the metadata reader macor to add metadata to vars and parameters.
  15. Use with-meta to add metadata to data.
+ 16. Use two spaces for indentation.
+ 17. Select meaningful names for functions and variables. Avoid acronyms that aren't commonly known. The only acceptable one letter names are for the following variables: i for an index and x/y/z for cartesian coordinates.
+ 18. The names of predicate functions (returning a boolean) should typically end with a question mark (?).
+ 19. Prefer rewriting code to make it clear over adding comments. If that cannot be achieved, add comments.
+ 20. Limit the number of functions invoked in a single line of code to five.
+ 21. Limit the nested depth of a function definition to four. In order to achieve this it may be necessary to introduce local variables to hold intermediate results or extract code into additional function definitions.
+ 22. Only use anonymous functions for short function definitions that fit comfortably on a single line. Otherwise create a private, named function.
+23. Do not write anonymous functions that have arguments that are anonymous functions.
 
 @Reference
- 1. Practical Clojure by Luke VanderHart and Stuart Sierra
+ 1. Practical Clojure - Luke VanderHart and Stuart Sierra
  2. Clojure In Action - Amit Rathore
  3. Programmin Clojure - Stuart Halloway
+ 4. http://java.ociweb.com/mark/clojure
