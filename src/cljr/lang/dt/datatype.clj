@@ -45,4 +45,48 @@
   SampleProtocol
   default-SampleProtocol)
 
+;; Use of extend-type to extend datatype with one ot more protocols
+(deftype CustomerDao [])
+
+(extend CustomerDao
+  SampleProtocol
+  default-SampleProtocol)
+
+(extend-type CustomerDao  
+  AnotherProtocol
+  (method-two [this]
+    (str "Hello " "World!")))
+
+
+;; Use of extend-protocol to impelement same protocol to one or more datatypes
+(deftype AddressDao [])
+(deftype StreetDao [])
+
+(extend-protocol AnotherProtocol
+  AddressDao
+  (method-two [this]
+    (str "Hello " "World!"))
+  StreetDao
+  (method-two [this]
+    (str "Hello " "World!")))
+
+;; extend Java Interface
+(defrecord Person [^{:tag String} name ^Integer age]
+  java.lang.Comparable
+  (compareTo [this other]
+    (compare age (:age other))))
+
+;; extend Java Class
+(deftype Human []
+  java.lang.Object
+  (toString [this]
+    "Human"))
+
+;; reifying anonymous datatypes - inner classes in Java
+(def symbol (let [s "Sample toString"]
+              (reify
+                java.lang.Object
+                (toString [this] s))))
+
+
 

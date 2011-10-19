@@ -20,4 +20,8 @@
   "Sample protocol to explore default implementation"
   (method-one [this] "Return toString"))
 
+(defprotocol AnotherProtocol
+  "Another Sample protocol - extend-protocol"
+  (method-two [this] "Returns Hello World!"))
+
 
