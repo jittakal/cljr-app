@@ -11,4 +11,13 @@
   (pop-off [this coll] "pop from the collection")
   (get-first [this coll] "return the first element"))
 
+(defprotocol BaseDao
+  "This is sample BaseDao protocol (Interface)"
+  (get-by-id [this ^String id] "Return single record by primary key")
+  (get-all [this] "Return all records"))
+
+(defprotocol SampleProtocol
+  "Sample protocol to explore default implementation"
+  (method-one [this] "Return toString"))
+
 
