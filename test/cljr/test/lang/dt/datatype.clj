@@ -37,4 +37,4 @@
   (is (.toString (Human.))))
 
 (deftest test-reify
-  (is (= "Sample toString" (str symbol))))
+  (is (= "Sample toString" (str cljr.lang.dt.datatype/temp-tos))))

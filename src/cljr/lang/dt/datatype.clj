@@ -83,7 +83,7 @@
     "Human"))
 
 ;; reifying anonymous datatypes - inner classes in Java
-(def symbol (let [s "Sample toString"]
+(def temp-tos (let [s "Sample toString"]
               (reify
                 java.lang.Object
                 (toString [this] s))))
