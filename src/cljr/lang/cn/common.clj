@@ -29,21 +29,32 @@
 ;;             [:div {:id "submain" :class "content"}
 ;;               "Hello World!"]]
 
-(defn html-to-hiccup
-  "Parse the html containing in file and convert into the
-   hiccup framework format html, support only one level"
-  [^String fname]
-  (let [xmap (xml/parse fname)]
-    (loop [s "" tmap xmap cvec (:content tmap)]
-      (if (empty? tmap)
-        (str s "]")
-        (recur (str s
-                    (if (map? tmap)
-                      (str "[" (:tag tmap) " " (:attrs tmap) " "))
-                    (if (string? (first cvec))
-                      (str " \"" (first cvec) "\"] ")))
-               (first cvec) [])))))
+(defn traverse-xmap
+  "Iterate the map of xml node is recursive function. DOM parsing approach."
+  [xmap]
+  (if (empty? (:content xmap))
+    (print (str "[" (:tag xmap) " " (:attrs xmap)))
+    (do
+      (print (str "[" (:tag xmap) " " (:attrs xmap)))
+      (loop [cvec (:content xmap)]        
+        (if (empty? cvec)
+          (print (str "]"))
+          (recur (do (if (map? (first cvec))
+                       (traverse-temp (first cvec))
+                       (print (str "\"" (first cvec) "\"")))
+                     (subvec cvec 1))))))))
 
+(defn parse-file
+  "Parse XML file containing HTML tag and print the hiccup framework
+   html tag represemtation
+   :Cons If nested tags are more then it may throw outofmemory error."
+  [^String fname] ;; file name
+  (traverse-xmap (xml/parse fname)))
+
+;; (traverse-xmap (xml/parse "shtml.xml"))
+
+
+;; Sample for nested for loop
 
 (defn nested-loop
   "Simple function to explore nested looping"
@@ -56,12 +67,3 @@
                     (if (empty? vi)
                       is
                       (recur (str is "#") (pop vi))))) (pop v)))))
-
-(defn temp-fn
-  [s v]
-  (loop [ts s tv v]
-    ;;(println "ts =>" ts)
-    ;;(println "tv => " tv)
-    (cond (empty? tv) ts
-          :else (recur (str ts (peek tv) " ") (pop tv)))))
-
