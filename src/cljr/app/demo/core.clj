@@ -7,7 +7,7 @@
 ;; Steps to follow
 ;; 1. Define Routes using (defroutes)
 ;; 2. define acutal routes using (HTTP-VERB url-pattern handler)
-;; handler simply return html code snippet
+;; handler is simply return html code snippet
 ;; 3. Start server by registering the earlier define routes
 
 (defroutes demoroutes
