@@ -40,7 +40,7 @@
         (if (empty? cvec)
           (print (str "]"))
           (recur (do (if (map? (first cvec))
-                       (traverse-temp (first cvec))
+                       (traverse-xmap (first cvec))
                        (print (str "\"" (first cvec) "\"")))
                      (subvec cvec 1))))))))
 
