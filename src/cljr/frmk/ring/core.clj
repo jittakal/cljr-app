@@ -1,4 +1,12 @@
-(ns cljr.frmk.ring.core
+;; To test add following in project.clj
+;; :ring {:handler ring.app.core/handler}
+;;
+;; command to start the ring server
+;; lein ring server
+
+(ns ^{:doc "Sample application using ring framework"
+      :author "Jitendra Takalkar <jitendra.takalkar@gmail.com>"}
+  cljr.frmk.ring.core  
   (:use [ring.util.response]
         [ring.middleware.params]
         [ring.middleware.session]
@@ -27,7 +35,6 @@
 (def uapp (-> basic-handler (wrap-upcase)))
 
 ;;(run-jetty uapp {:port 8080})
-
 
 
 ;; utility functions

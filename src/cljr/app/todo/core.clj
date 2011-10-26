@@ -1,4 +1,6 @@
-(ns cljr.app.todo.core
+(ns ^{:doc "Sample web application using Compojure framework"
+      :author "Jitendra Takalkar <jitendra.takalkar@gmail.com>"}
+  cljr.app.todo.core
   (:use [compojure.core :only [defroutes]])
   (:require [compojure.route :as route]
             [compojure.handler :as handler]
@@ -6,8 +8,9 @@
             [cljr.app.todo.controller.todo :as todo-c]
             [cljr.app.todo.view.layout :as layout]))
 
+;; define routes of the application
 (defroutes routes
-  todo-c/routes
+  (todo-c/routes)
   (route/resources "/")
   (route/not-found (layout/four-oh-four)))
 

@@ -14,5 +14,5 @@
                  [clj-http "0.2.1"]]
   :dev-dependencies [[swank-clojure "1.4.0-SNAPSHOT"]
                      [lein-ring "0.4.5"]]
-  :ring {:handler cljr.app.demo.core/demoroutes}
+  :ring {:handler cljr.app.demo.core/demoapp}
   :repositories {"sonatype-oss-public" "http://oss.sonatype.org/content/groups/public/"})
