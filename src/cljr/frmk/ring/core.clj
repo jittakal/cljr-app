@@ -70,6 +70,12 @@
                request
                (str "<div style=\"float:left\">Hello World!</div><div style=\"float:right\"><a href=\"/login\">Login</a></div>")))
 
+(defn login
+  [request]  
+  (main-layout "Login"
+               request
+               (str "<form action=\"/welcome\" method=\"POST\"><input type=\"text\" name=\"userid\" value=\"\"/><input type=\"password\" name=\"passwd\"/><input type=\"submit\"/></form>")))
+
 (defn welcome
   [request]
   (if (= :get (:request-method request))
@@ -77,12 +83,6 @@
     (main-layout "Welcome"
                request
                (str "Welcome " (get (:form-params request) "userid") "! Wish you a very Happy Diwali!!!"))))
-
-(defn login
-  [request]  
-  (main-layout "Login"
-               request
-               (str "<form action=\"/welcome\" method=\"POST\"><input type=\"text\" name=\"userid\" value=\"\"/><input type=\"password\" name=\"passwd\"/><input type=\"submit\"/></form>")))
 
 (defn not-found
   [request]  
