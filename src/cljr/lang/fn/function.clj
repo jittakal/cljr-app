@@ -69,3 +69,21 @@
   ([] "Hello, World!")
   ([username] (str "Hello, " username "!")))
 
+;; destructuring form.
+;; clojure supports abstract structural binding often refered as destructuring form
+
+(defn dstruct-sample-1
+  "Sample using destructing form"
+  [{name :name}]
+  (str "Hello, " name))
+
+(defn dstruct-sample-2
+  "Sample using destructring form"
+  [{{name "name"} :param}]
+  (str "Hello, Jitendra"))
+
+(defn dstruct-sample-3
+  "Sample using destructring form"
+  [[x y]]
+  (+ x y))
+

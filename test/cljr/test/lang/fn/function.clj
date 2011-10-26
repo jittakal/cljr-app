@@ -48,4 +48,9 @@
   (is (= "Hello, World!" (greeting)))
   (is (= "Hello, Jitendra!" (greeting "Jitendra"))))
 
+(deftest test-dstruct-sample
+  (is (= "Hello, Jitendra" (dstruct-sample-1 {:name "Jitendra"})))
+  (is (= "Hello, Jitendra" (dstruct-sample-2 {:param {:name "Jitendra"}})))
+  (is (= 10 (dstruct-sample-3 [5 5]))))
+
 
