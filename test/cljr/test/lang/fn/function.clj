@@ -53,4 +53,7 @@
   (is (= "Hello, Jitendra" (dstruct-sample-2 {:param {:name "Jitendra"}})))
   (is (= 10 (dstruct-sample-3 [5 5]))))
 
+(deftest test-sum-down-from
+  (is (= 55 (sum-down-from 0 10))))
+
 

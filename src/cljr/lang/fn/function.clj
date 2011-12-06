@@ -87,3 +87,19 @@
   [[x y]]
   (+ x y))
 
+(defn print-down-from
+  "Print down from number to zero"
+  [^Integer x]
+  (when (pos? x) ;; use of 'when' implicit do block
+    (println x)
+    (recur (dec x)))) ;; recursive function
+
+;; (print-down-from 5)
+
+(defn sum-down-from
+  "Sum down from number till zero"
+  [^Integer sum ^Integer x]
+  {:pre (pos? x)}
+  (if-not (pos? x)
+    sum
+    (recur (+ sum x) (dec x))))
