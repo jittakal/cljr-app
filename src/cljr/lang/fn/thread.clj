@@ -18,6 +18,6 @@
   (for [i (range 10)]
     (do (println i) i)))
 
-(first (thread-test))
+
 
 
