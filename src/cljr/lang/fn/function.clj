@@ -1,4 +1,6 @@
-(ns cljr.lang.fn.function)
+(ns ^{:author "Jitendra Takalkar jitendra.takalkar@gmail.com"
+      :doc "Sample for functions"}
+  cljr.lang.fn.function)
 
 ;; define functions with fn
 (def my-mult

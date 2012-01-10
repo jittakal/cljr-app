@@ -1,7 +1,9 @@
-(ns cljr.lang.api.core)
+(ns ^{:doc "clojure.core api"
+      :author "Jitendra Takalkar"}
+  cljr.lang.api.core)
 
-(defn say-hello
-  [name]
+(defn say-hello ^String
+  [^String name]
   (str "Hello " name))
 
 (defn say-hi
