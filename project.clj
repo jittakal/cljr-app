@@ -1,6 +1,6 @@
 (defproject cljr-app "1.0.0-SNAPSHOT"
   :description "cljr-app"  
-  :dependencies [[org.clojure/clojure "1.3.0"]
+  :dependencies [[org.clojure/clojure "1.4.0"]
                  [org.clojure/java.jdbc "0.0.6"]
                  [org.clojure.contrib/trace "1.3.0-SNAPSHOT"]
                  [org.clojure.contrib/json "1.3.0-SNAPSHOT"]
@@ -12,7 +12,7 @@
                  [compojure "0.6.4"]
                  [hiccup "0.3.6"]
                  [clj-http "0.2.1"]]
-  :dev-dependencies [[swank-clojure "1.4.0-SNAPSHOT"]
-                     [lein-ring "0.4.5"]]
+  :dev-dependencies [[lein-ring "0.4.5"]]
+  :plugins [[lein-swank "1.4.4"]]
   :ring {:handler cljr.app.demo.core/demoapp}
   :repositories {"sonatype-oss-public" "http://oss.sonatype.org/content/groups/public/"})
